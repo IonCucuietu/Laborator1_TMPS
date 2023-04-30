@@ -1,0 +1,16 @@
+C:\Users\ioncu\source\repos\TMPS\TMPS\bin\Debug\net5.0\TMPS.exe
+C:\Users\ioncu\source\repos\TMPS\TMPS\bin\Debug\net5.0\TMPS.deps.json
+C:\Users\ioncu\source\repos\TMPS\TMPS\bin\Debug\net5.0\TMPS.runtimeconfig.json
+C:\Users\ioncu\source\repos\TMPS\TMPS\bin\Debug\net5.0\TMPS.runtimeconfig.dev.json
+C:\Users\ioncu\source\repos\TMPS\TMPS\bin\Debug\net5.0\TMPS.dll
+C:\Users\ioncu\source\repos\TMPS\TMPS\bin\Debug\net5.0\ref\TMPS.dll
+C:\Users\ioncu\source\repos\TMPS\TMPS\bin\Debug\net5.0\TMPS.pdb
+C:\Users\ioncu\source\repos\TMPS\TMPS\obj\Debug\net5.0\TMPS.csproj.AssemblyReference.cache
+C:\Users\ioncu\source\repos\TMPS\TMPS\obj\Debug\net5.0\TMPS.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ioncu\source\repos\TMPS\TMPS\obj\Debug\net5.0\TMPS.AssemblyInfoInputs.cache
+C:\Users\ioncu\source\repos\TMPS\TMPS\obj\Debug\net5.0\TMPS.AssemblyInfo.cs
+C:\Users\ioncu\source\repos\TMPS\TMPS\obj\Debug\net5.0\TMPS.csproj.CoreCompileInputs.cache
+C:\Users\ioncu\source\repos\TMPS\TMPS\obj\Debug\net5.0\TMPS.dll
+C:\Users\ioncu\source\repos\TMPS\TMPS\obj\Debug\net5.0\ref\TMPS.dll
+C:\Users\ioncu\source\repos\TMPS\TMPS\obj\Debug\net5.0\TMPS.pdb
+C:\Users\ioncu\source\repos\TMPS\TMPS\obj\Debug\net5.0\TMPS.genruntimeconfig.cache

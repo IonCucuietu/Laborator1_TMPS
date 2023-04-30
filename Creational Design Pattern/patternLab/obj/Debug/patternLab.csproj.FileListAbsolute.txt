@@ -18,3 +18,12 @@ C:\Users\ioncu\source\repos\lab2tmps-main\patternLab\obj\Debug\patternLab.csproj
 C:\Users\ioncu\source\repos\lab2tmps-main\patternLab\obj\Debug\patternLab.csproj.CoreCompileInputs.cache
 C:\Users\ioncu\source\repos\lab2tmps-main\patternLab\obj\Debug\patternLab.exe
 C:\Users\ioncu\source\repos\lab2tmps-main\patternLab\obj\Debug\patternLab.pdb
+C:\Users\ioncu\source\repos\lab2tmps-main\Creational Design Pattern\patternLab\bin\Debug\patternLab.exe.config
+C:\Users\ioncu\source\repos\lab2tmps-main\Creational Design Pattern\patternLab\bin\Debug\patternLab.exe
+C:\Users\ioncu\source\repos\lab2tmps-main\Creational Design Pattern\patternLab\bin\Debug\patternLab.pdb
+C:\Users\ioncu\source\repos\lab2tmps-main\Creational Design Pattern\patternLab\obj\Debug\patternLab.csproj.AssemblyReference.cache
+C:\Users\ioncu\source\repos\lab2tmps-main\Creational Design Pattern\patternLab\obj\Debug\patternLab.Properties.Resources.resources
+C:\Users\ioncu\source\repos\lab2tmps-main\Creational Design Pattern\patternLab\obj\Debug\patternLab.csproj.GenerateResource.cache
+C:\Users\ioncu\source\repos\lab2tmps-main\Creational Design Pattern\patternLab\obj\Debug\patternLab.csproj.CoreCompileInputs.cache
+C:\Users\ioncu\source\repos\lab2tmps-main\Creational Design Pattern\patternLab\obj\Debug\patternLab.exe
+C:\Users\ioncu\source\repos\lab2tmps-main\Creational Design Pattern\patternLab\obj\Debug\patternLab.pdb

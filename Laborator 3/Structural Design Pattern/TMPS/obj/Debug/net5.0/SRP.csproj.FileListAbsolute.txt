@@ -1,0 +1,16 @@
+C:\Users\ioncu\source\repos\TMPS\TMPS\bin\Debug\net5.0\SRP.exe
+C:\Users\ioncu\source\repos\TMPS\TMPS\bin\Debug\net5.0\SRP.deps.json
+C:\Users\ioncu\source\repos\TMPS\TMPS\bin\Debug\net5.0\SRP.runtimeconfig.json
+C:\Users\ioncu\source\repos\TMPS\TMPS\bin\Debug\net5.0\SRP.runtimeconfig.dev.json
+C:\Users\ioncu\source\repos\TMPS\TMPS\bin\Debug\net5.0\SRP.dll
+C:\Users\ioncu\source\repos\TMPS\TMPS\bin\Debug\net5.0\ref\SRP.dll
+C:\Users\ioncu\source\repos\TMPS\TMPS\bin\Debug\net5.0\SRP.pdb
+C:\Users\ioncu\source\repos\TMPS\TMPS\obj\Debug\net5.0\SRP.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ioncu\source\repos\TMPS\TMPS\obj\Debug\net5.0\SRP.AssemblyInfoInputs.cache
+C:\Users\ioncu\source\repos\TMPS\TMPS\obj\Debug\net5.0\SRP.AssemblyInfo.cs
+C:\Users\ioncu\source\repos\TMPS\TMPS\obj\Debug\net5.0\SRP.csproj.CoreCompileInputs.cache
+C:\Users\ioncu\source\repos\TMPS\TMPS\obj\Debug\net5.0\SRP.dll
+C:\Users\ioncu\source\repos\TMPS\TMPS\obj\Debug\net5.0\ref\SRP.dll
+C:\Users\ioncu\source\repos\TMPS\TMPS\obj\Debug\net5.0\SRP.pdb
+C:\Users\ioncu\source\repos\TMPS\TMPS\obj\Debug\net5.0\SRP.genruntimeconfig.cache
+C:\Users\ioncu\source\repos\TMPS\TMPS\obj\Debug\net5.0\SRP.csproj.AssemblyReference.cache
