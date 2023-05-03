@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ioncu\\source\\repos\\Laborator1_TMPS\\TMPS\\TMPS\\SOLID.csproj": {}
+    "C:\\Users\\ioncu\\source\\repos\\TMPS\\Laborator 3\\Structural Design Pattern\\TMPS\\SOLID.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ioncu\\source\\repos\\Laborator1_TMPS\\TMPS\\TMPS\\SOLID.csproj": {
+    "C:\\Users\\ioncu\\source\\repos\\TMPS\\Laborator 3\\Structural Design Pattern\\TMPS\\SOLID.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ioncu\\source\\repos\\Laborator1_TMPS\\TMPS\\TMPS\\SOLID.csproj",
+        "projectUniqueName": "C:\\Users\\ioncu\\source\\repos\\TMPS\\Laborator 3\\Structural Design Pattern\\TMPS\\SOLID.csproj",
         "projectName": "SOLID",
-        "projectPath": "C:\\Users\\ioncu\\source\\repos\\Laborator1_TMPS\\TMPS\\TMPS\\SOLID.csproj",
+        "projectPath": "C:\\Users\\ioncu\\source\\repos\\TMPS\\Laborator 3\\Structural Design Pattern\\TMPS\\SOLID.csproj",
         "packagesPath": "C:\\Users\\ioncu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ioncu\\source\\repos\\Laborator1_TMPS\\TMPS\\TMPS\\obj\\",
+        "outputPath": "C:\\Users\\ioncu\\source\\repos\\TMPS\\Laborator 3\\Structural Design Pattern\\TMPS\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
