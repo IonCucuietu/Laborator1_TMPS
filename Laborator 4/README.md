@@ -1,25 +1,37 @@
   TMPS
+  
  Cucuietu Ion 
+ 
   TI-202 
+  
+  Laborator 4
 
 Theory:
 
-Behavioral design pattern-urile sunt un tip de design pattern-uri software care se concentrează pe modul în care diferite obiecte și clase colaborează între ele și își îndeplinesc sarcinile. Acestea se concentrează pe comportamentul obiectelor și oferă soluții pentru problemele de comunicare între obiecte și de gestionare a fluxurilor de date într-o aplicație.
+  Behavioral design pattern-urile sunt un tip de design pattern-uri software care se concentrează pe modul în care diferite obiecte și clase colaborează între ele și își îndeplinesc sarcinile. Acestea se concentrează pe comportamentul obiectelor și oferă soluții pentru problemele de comunicare între obiecte și de gestionare a fluxurilor de date într-o aplicație.
 
-Unul dintre cele mai importante aspecte ale behavioral design pattern-urilor este că acestea sunt în mare parte independente de platforma sau limbajul de programare utilizat pentru a dezvolta aplicația. Prin urmare, acestea sunt utile pentru programatorii care doresc să își îmbunătățească abilitățile de proiectare a software-ului.
+  Unul dintre cele mai importante aspecte ale behavioral design pattern-urilor este că acestea sunt în mare parte independente de platforma sau limbajul de programare utilizat pentru a dezvolta aplicația. Prin urmare, acestea sunt utile pentru programatorii care doresc să își îmbunătățească abilitățile de proiectare a software-ului.
 
 Visitor Încapsulează un algoritm în interiorul unei clase
+
 Iterator Accesează secvențial elementele unei colecții
+
 Memento Capturează și restabilește starea internă a unui obiect
+
 Observer O modalitate de a notifica modificarea unui număr de clase
+
 Template Amânați pașii exacti ai unui algoritm la o subclasă
+
 
 
 Objectives:
 
 Prin extinderea proiectului, implementați cel puțin 1 model de design comportamental în proiectul dvs.
+
 Păstrați fișierele grupate în funcție de responsabilitățile lor
+
 Documentați-vă munca într-un fișier separat de reducere, conform cerințelor prezentate mai jos
+
 
 
 Implementation description
@@ -37,18 +49,29 @@ Pentru a implementa design pattern-ul Iterator în proiectul meu, trebuie să ad
 
 Mai întâi, vom adăuga interfața IIterator:
 
+
 public interface IIterator
+
 {
+
      bool HasNext();
+     
      ILibraryItem Next();
+     
      ILibraryItem Current { get; }
+     
 }
+
 
 Apoi vom adăuga clasa BookCollection care va implementa această interfață:
 
+
 public class BookCollection : IIterator
+
 {
+
      private List<Book> books;
+     
      private int current = 0;
 
      public BookCollection(List<Book> books)
@@ -78,21 +101,35 @@ public class BookCollection : IIterator
 
 
 public static void Main(string[] args)
+
 {
+
      var books = new List<Book>
+     
      {
+     
           new Book { Title = "The Catcher in the Rye", Author = "J.D. Salinger", Pages = 224, Publisher = "Little, Brown and Company" },
+          
           new Book { Title = "To Kill a Mockingbird", Author = "Harper Lee", Pages = 336, Publisher = "J.B. Lippincott & Co." },
+          
           new Book { Title = "1984", Author = "George Orwell", Pages = 328, Publisher = "Secker & Warburg" }
+          
      };
+     
      var bookCollection = new BookCollection(books);
 
      // Iteram prin colecția de cărți
+     
      while (bookCollection.HasNext())
+     
      {
+     
           var book = (Book)bookCollection.Next();
+          
           Console.WriteLine($"Titlu: {book.Title}, Autor: {book.Author}, Pagini: {book.Pages}, Editura: {book.Publisher}");
+          
      }
+     
 }
 
 
@@ -116,121 +153,195 @@ Library - aceasta este clasa care va acționa ca subiect și va informa observat
 Iată cum ar putea arăta implementarea:
 
 public interface ISubject
+
 {
+
      void Attach(IObserver observer);
+     
      void Detach(IObserver observer);
+     
      void Notify(string eventType, object eventData);
+     
 }
 
 public interface IObserver
+
 {
+
      void Update(string eventType, object eventData);
+     
 }
 
 public class Library : ISubject
+
 {
+
      private List<ILibraryItem> items;
+  
      private List<IObserver> observers;
 
      public Library(List<ILibraryItem> items)
+  
      {
+  
           this.items = items;
+  
           observers = new List<IObserver>();
+          
      }
 
      public void Attach(IObserver observer)
+     
      {
+     
           observers.Add(observer);
+          
      }
 
      public void Detach(IObserver observer)
+     
      {
+     
           observers.Remove(observer);
+          
      }
 
      public void Notify(string eventType, object eventData)
+     
      {
+     
           foreach (var observer in observers)
+          
           {
+          
                observer.Update(eventType, eventData);
+               
           }
+          
      }
 
      public void AddItem(ILibraryItem item)
+     
      {
+     
           items.Add(item);
+          
           Notify("ItemAdded", item);
+          
      }
 
      public void RemoveItem(ILibraryItem item)
+     
      {
+     
           items.Remove(item);
+          
           Notify("ItemRemoved", item);
+          
      }
+     
 }
 
 Mai departe, vom modifica acum clasa BookCollection pentru a implementa interfața IObserver, astfel încât să putem monitoriza evenimentele ItemAdded și ItemRemoved și să le afișăm în consolă:
 
 
  public class BookCollection : IIterator, IObserver
+ 
      {
+     
           private List<Book> books;
+          
           private int current = 0;
+          
           private List<IObserver> observers = new List<IObserver>();
 
           public BookCollection(List<Book> books)
+          
           {
+          
                this.books = books;
+               
           }
 
           public bool HasNext()
+          
           {
+          
                return current < books.Count;
+               
           }
 
           public ILibraryItem Next()
+          
           {
+          
                var book = books[current];
+               
                current++;
 
                // Notificăm observatorii cu privire la evenimentul următorului element din colecție
+               
                NotifyObservers();
 
                return book;
           }
 
           public ILibraryItem Current
+          
           {
+          
                get { return books[current]; }
+               
           }
 
           // Implementarea metodelor din ISubject
+          
           public void RegisterObserver(IObserver observer)
+          
           {
+          
                observers.Add(observer);
+               
           }
 
           public void RemoveObserver(IObserver observer)
+          
           {
+          
                observers.Remove(observer);
+               
           }
 
           public void NotifyObservers()
+          
           {
+          
                foreach (IObserver observer in observers)
+               
                {
+               
                     observer.Update(this);
+                    
                }
+               
           }
+          
           public void Update(string message, object sender)
+          
           {
+          
                Console.WriteLine($"Book Collection received message: {message}");
+               
           }
 
           public void Update(BookCollection bookCollection)
+          
           {
+          
                this.books = bookCollection.books;
+               
           }
+          
      }
 
 3. Memento
@@ -243,121 +354,194 @@ Acest pattern este util atunci când un obiect trebuie să poată fi readus la o
 În mod tradițional, acest pattern constă din trei componente principale:
 
 Originator: este clasa care deține starea internă și care poate crea un memento pentru a salva această stare sau poate utiliza un memento pentru a-și restabili starea anterioară.
+
 Memento: este clasa care reprezintă starea internă salvată a originatorului și care poate fi restaurată la o dată ulterioară.
+
 Caretaker: este clasa care este responsabilă pentru gestionarea memento-urilor create de originator și care le poate restabili la cerere.
 
 
 // Clasa Memento
+
 public class BookCollectionMemento
+
 {
+
     public List<Book> Books { get; set; }
 
     public BookCollectionMemento(List<Book> books)
+    
     {
+    
         Books = new List<Book>(books);
+        
     }
+    
 }
 
 // Clasa Caretaker
+
 public class BookCollectionCaretaker
+
 {
+
     private List<BookCollectionMemento> mementos = new List<BookCollectionMemento>();
+    
     private BookCollection bookCollection;
 
     public BookCollectionCaretaker(BookCollection bookCollection)
+    
     {
+    
         this.bookCollection = bookCollection;
+        
     }
 
     public void Backup()
+    
     {
+    
         Console.WriteLine("Saving Book Collection state...");
+        
         mementos.Add(new BookCollectionMemento(bookCollection.Books));
+        
     }
 
     public void Undo()
+    
     {
+    
         if (mementos.Count == 0)
+        
         {
+        
             Console.WriteLine("There are no more mementos to restore.");
+            
             return;
+            
         }
 
         Console.WriteLine("Restoring Book Collection state...");
+        
         var memento = mementos.Last();
+        
         mementos.Remove(memento);
 
         bookCollection.Restore(memento);
+        
     }
+    
 }
 
 // Clasa BookCollection actualizată cu metoda Restore()
+
 public class BookCollection : IIterator, IObserver
+
 {
+
     private List<Book> books;
+    
     private int current = 0;
+    
     private List<IObserver> observers = new List<IObserver>();
 
     public BookCollection(List<Book> books)
+    
     {
+    
         this.books = books;
+        
     }
 
     public bool HasNext()
+    
     {
+    
         return current < books.Count;
+        
     }
 
     public ILibraryItem Next()
+    
     {
+    
         var book = books[current];
+        
         current++;
 
         // Notificăm observatorii cu privire la evenimentul următorului element din colecție
+        
         NotifyObservers();
 
         return book;
+        
     }
 
     public ILibraryItem Current
+    
     {
+    
         get { return books[current]; }
+        
     }
 
     // Implementarea metodelor din ISubject
+    
     public void RegisterObserver(IObserver observer)
+    
     {
+    
         observers.Add(observer);
+        
     }
 
     public void RemoveObserver(IObserver observer)
+    
     {
+    
         observers.Remove(observer);
+        
     }
 
     public void NotifyObservers()
+    
     {
+    
         foreach (IObserver observer in observers)
+        
         {
+        
             observer.Update(this);
+            
         }
+        
     }
 
     public void Update(string message, object sender)
+    
     {
+    
         Console.WriteLine($"Book Collection received message: {message}");
+        
     }
 
     public void Update(BookCollection bookCollection)
+    
     {
+    
         this.books = bookCollection.books;
+        
     }
 
     public void Restore(BookCollectionMemento memento)
+    
     {
+    
         books = memento.Books;
+        
         current = 0;
+       
     }
+    
 }
 
 
